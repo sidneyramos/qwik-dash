@@ -1,7 +1,9 @@
+// @ts-nocheck
 import { component$, useStylesScoped$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 // import { Link } from "@builder.io/qwik-city";
 import indexCss from "./index.css?inline";
+
 export default component$(() => {
   useStylesScoped$(indexCss);
   return (
@@ -899,32 +901,32 @@ export default component$(() => {
                 <span
                   class="badge filter bg-gradient-primary active"
                   data-color="primary"
-                  onClick$={(e) => console.log(e)}
+                  onclick="sidebarColor(this)"
                 ></span>
                 <span
                   class="badge filter bg-gradient-dark"
                   data-color="dark"
-                  onClick$={(e) => console.log(e)}
+                  onclick="sidebarColor(this)"
                 ></span>
                 <span
                   class="badge filter bg-gradient-info"
                   data-color="info"
-                  onClick$={(e) => console.log(e)}
+                  onclick="sidebarColor(this)"
                 ></span>
                 <span
                   class="badge filter bg-gradient-success"
                   data-color="success"
-                  onClick$={(e) => console.log(e)}
+                  onclick="sidebarColor(this)"
                 ></span>
                 <span
                   class="badge filter bg-gradient-warning"
                   data-color="warning"
-                  onClick$={(e) => console.log(e)}
+                  onclick="sidebarColor(this)"
                 ></span>
                 <span
                   class="badge filter bg-gradient-danger"
                   data-color="danger"
-                  onClick$={(e) => console.log(e)}
+                  onclick="sidebarColor(this)"
                 ></span>
               </div>
             </a>
@@ -934,8 +936,20 @@ export default component$(() => {
               <p class="text-sm">Choose between 2 different sidenav types.</p>
             </div>
             <div class="d-flex">
-              {/* <button class="btn bg-gradient-primary w-100 px-3 mb-2 active me-2" data-class="bg-white" onclick="sidebarType(this)">White</button> */}
-              {/* <button class="btn bg-gradient-primary w-100 px-3 mb-2" data-class="bg-default" onclick="sidebarType(this)">Dark</button> */}
+              <button
+                class="btn bg-gradient-primary w-100 px-3 mb-2 active me-2"
+                data-class="bg-white"
+                onclick="sidebarType(this)"
+              >
+                White
+              </button>
+              <button
+                class="btn bg-gradient-primary w-100 px-3 mb-2"
+                data-class="bg-default"
+                onclick="sidebarType(this)"
+              >
+                Dark
+              </button>
             </div>
             <p class="text-sm d-xl-none d-block mt-2">
               You can change the sidenav type just on desktop view.
@@ -948,7 +962,7 @@ export default component$(() => {
                   class="form-check-input mt-1 ms-auto"
                   type="checkbox"
                   id="navbarFixed"
-                  onClick$={(e) => console.log(e)}
+                  onclick="navbarFixed(this)"
                 />
               </div>
             </div>
@@ -960,7 +974,7 @@ export default component$(() => {
                   class="form-check-input mt-1 ms-auto"
                   type="checkbox"
                   id="dark-version"
-                  onClick$={(e) => console.log(e)}
+                  onclick="darkMode(this)"
                 />
               </div>
             </div>
