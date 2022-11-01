@@ -1,8 +1,13 @@
-import { component$, useStyles$ } from '@builder.io/qwik';
-import { QwikCity, RouterOutlet, ServiceWorkerRegister } from '@builder.io/qwik-city';
-import { RouterHead } from './components/router-head/router-head';
-
-import globalStyles from './global.css?inline';
+import { component$, useStyles$ } from "@builder.io/qwik";
+import {
+  QwikCity,
+  RouterOutlet,
+  ServiceWorkerRegister,
+} from "@builder.io/qwik-city";
+import { RouterHead } from "./components/router-head/router-head";
+import "@fontsource/inter";
+import "@fontsource/inter/700.css";
+import globalStyles from "./global.css?inline";
 
 export default component$(() => {
   /**
