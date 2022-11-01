@@ -7,7 +7,8 @@ import {
 import { RouterHead } from "./components/router-head/router-head";
 import "@fontsource/inter";
 import "@fontsource/inter/700.css";
-import globalStyles from "./global.css?inline";
+import normalize from "./normalize.css?inline";
+import skeleton from "./skeleton.css?inline";
 
 export default component$(() => {
   /**
@@ -16,7 +17,8 @@ export default component$(() => {
    *
    * Dont remove the `<head>` and `<body>` elements.
    */
-  useStyles$(globalStyles);
+  useStyles$(normalize);
+  useStyles$(skeleton);
 
   return (
     <QwikCity>
